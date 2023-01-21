@@ -57,7 +57,7 @@ You will find a total of 2 codes made in Python, of which 1 has the extension .i
     <li>
         <b>color_calibration.ipynb</b> In this code is all the image processing necessary to prepare the ColorChecker and obtain the necessary data to start the differential evolution algorithm, to obtain the multiplier matrix that will calibrate the image properly.<br><br>
         <div align="center">
-            <img width="60%" src="https://github.com/ASASauqui/Color-calibration/blob/main/readme_images/codes/1.png?raw=true" />
+            <img width="70%" src="https://github.com/ASASauqui/Color-calibration/blob/main/readme_images/codes/1.png?raw=true" />
             <p>Images comparison.</p>
         </div>
     </li>
