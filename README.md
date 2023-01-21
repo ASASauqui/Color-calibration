@@ -1,6 +1,6 @@
-<h1><b>Circle images</b></h1>
+<h1><b>Color calibration</b></h1>
 
-Circle images with differential evolutionary algorithm from scratch.<br>
+Color calibration with differential evolutionary algorithm from scratch.<br>
 
 <h2><b>Introduction</b></h2>
 
