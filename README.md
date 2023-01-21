@@ -2,6 +2,11 @@
 
 Color calibration with differential evolutionary algorithm from scratch.<br>
 
+<div align="center">
+    <img width="80%" src="https://github.com/ASASauqui/Color-calibration/blob/main/readme_images/results/2.png?raw=true" />
+    <p>Comparison of calibrated images.</p>
+</div><br>
+
 <h2><b>Introduction</b></h2>
 
 Color calibration is for practical use in some problems, such as algorithms for meat spoilage detection based on color, chemical measurements based on reagents, etc.; color is a physical aspect that provides information, therefore, its correct calibration is relevant. In this project, the use of the differential evolution algorithm and various image processing techniques, such as inverse binary thresholding and perspective-dependent image warping, for calibrating colors in an image based on a ColorChecker. Transformation and perspective deformation were used for the robustness of the algorithm for the detection of the ColorChecker matrix, as well as the search for polygons according to the contours obtained based on an external search and their polygonal approximation through the algorithm of Douglas-Peucker.
