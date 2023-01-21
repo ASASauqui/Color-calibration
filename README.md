@@ -4,8 +4,10 @@ Color calibration with differential evolutionary algorithm from scratch.<br>
 
 <h2><b>Introduction</b></h2>
 
-Color calibration is for practical use in some problems, such as algorithms for meat spoilage detection based on color, chemical measurements based on reagents, etc.; color is a physical aspect that provides information, therefore, its correct calibration is relevant. In this project, the use of the differential evolution algorithm and various image processing techniques, such as inverse binary thresholding and perspective-dependent image warping, for calibrating colors in an image based on a ColorChecker. Transformation and perspective deformation were used for the robustness of the algorithm for the detection of the ColorChecker matrix, as well as the search for polygons according to the contours obtained based on an external search and their polygonal approximation through the algorithm of Douglas-Peucker.<br><br>
-The objective of this project is to develop an algorithm that allows the correct calibration of color images. The colors within the image contain information about the image that can be used for various analyses, either for the collection of physical or chemical characteristics of the image. In other related works, different methodologies are used to achieve this calibration, such as the use of Bayesian neural network models, where a neural network is trained with white balance data; the application of Thin-Plate Spline interpolation algorithms, where the sRGB coordinates of the ColorChecker were deformed through TPS interpolation, modified for three-dimensional space; the use of polynomial fit based on pieces, where functions are selected for different intervals; the use of statistical-based methods in an unsupervised learning model where color constancy will be evaluated; or there are even some more focused on merely detecting the ColorChecker in an optimal way, either with the use of deep convolutional neural networks, where a neural network is trained with synthetic images of the ColorChecker 3D models and different background images.<br><br>
+Color calibration is for practical use in some problems, such as algorithms for meat spoilage detection based on color, chemical measurements based on reagents, etc.; color is a physical aspect that provides information, therefore, its correct calibration is relevant. In this project, the use of the differential evolution algorithm and various image processing techniques, such as inverse binary thresholding and perspective-dependent image warping, for calibrating colors in an image based on a ColorChecker. Transformation and perspective deformation were used for the robustness of the algorithm for the detection of the ColorChecker matrix, as well as the search for polygons according to the contours obtained based on an external search and their polygonal approximation through the algorithm of Douglas-Peucker.
+
+The objective of this project is to develop an algorithm that allows the correct calibration of color images. The colors within the image contain information about the image that can be used for various analyses, either for the collection of physical or chemical characteristics of the image. In other related works, different methodologies are used to achieve this calibration, such as the use of Bayesian neural network models, where a neural network is trained with white balance data; the application of Thin-Plate Spline interpolation algorithms, where the sRGB coordinates of the ColorChecker were deformed through TPS interpolation, modified for three-dimensional space; the use of polynomial fit based on pieces, where functions are selected for different intervals; the use of statistical-based methods in an unsupervised learning model where color constancy will be evaluated; or there are even some more focused on merely detecting the ColorChecker in an optimal way, either with the use of deep convolutional neural networks, where a neural network is trained with synthetic images of the ColorChecker 3D models and different background images.
+
 The proposal within this project suggests the use of image processing to search for important elements that share characteristics with the matrix being searched for; deformation of the ColorChecker matrix image based on perspective to have a better manipulation of the information; and the use of the differential evolution algorithm for the optimization of an objective function that seeks to reduce the sum of the difference between the control ColorChecker matrix and the calibrated ColorChecker matrix, this by using a 3x3 matrix that will be responsible to be able to calibrate the image.<br><br>
 
 <h2><b>Used technologies</b></h2>
@@ -14,18 +16,18 @@ It is an optimization project made with:
 
 <table align="center">
     <tr>
-        <th align="center" style="text-align: center" width="50%">
+        <th align="center" style="text-align: center">
             Programming Language
         </th>
-        <th align="center" style="text-align: center" width="50%">
+        <th align="center" style="text-align: center">
             Library
         </th>
     </tr>
     <tr>
-        <td align="center" width="50%">
+        <td align="center">
             <img src="https://img.shields.io/badge/python-blue.svg?style=for-the-badge&logo=python&logoColor=white">
         </td>
-        <td align="center" width="50%">
+        <td align="center">
             <img src="https://img.shields.io/badge/cv2-ab33c6.svg?style=for-the-badge">
         </td>
     </tr>
