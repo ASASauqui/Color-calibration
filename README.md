@@ -134,10 +134,10 @@ A deformation process will be applied to the matrix cut or extracted from the im
 Firstly, the coordinates of the vertices of said matrix must be arranged to your liking, in this case the order must be clockwise, starting from the upper left vertex, that is: Top-Left, Top-Right, Bottom-Right, Bottom-Left.<br><br>
 Once these vertices are arranged in the desired order, the dimensions where the image of the deformed matrix will reside must be created. In this case, the distances between two points must be obtained, obtaining the width A and B, and the height A and B, this is because a perfect rectangle cannot always result, normally it will have the shape of a trapezoid.<br><br>
 <div align="center">
-    <img width="50%" src="https://latex.codecogs.com/svg.latex?\Large&space;width_A=\sqrt{(BottomRight_x-BottomLeft_x)^2+(BottomRight_y-BottomLeft_y)^2}"/>
-    <img width="50%" src="https://latex.codecogs.com/svg.latex?\Large&space;width_B=\sqrt{(TopRight_x-TopLeft_x)^2+(TopRight_y-TopLeft_y)^2}"/>
-    <img width="50%" src="https://latex.codecogs.com/svg.latex?\Large&space;height_A=\sqrt{(TopRight_x-BottomRight_x)^2+(TopRight_y-BottomRight_y)^2}"/>
-    <img width="50%" src="https://latex.codecogs.com/svg.latex?\Large&space;height_B=\sqrt{(TopLeft_x-BottomLeft_x)^2+(TopLeft_y-BottomLeft_y)^2}"/>
+    <img width="50%" src="https://latex.codecogs.com/svg.latex?;width_A=\sqrt{(BottomRight_x-BottomLeft_x)^2+(BottomRight_y-BottomLeft_y)^2}"/>
+    <img width="50%" src="https://latex.codecogs.com/svg.latex?;width_B=\sqrt{(TopRight_x-TopLeft_x)^2+(TopRight_y-TopLeft_y)^2}"/>
+    <img width="50%" src="https://latex.codecogs.com/svg.latex?;height_A=\sqrt{(TopRight_x-BottomRight_x)^2+(TopRight_y-BottomRight_y)^2}"/>
+    <img width="50%" src="https://latex.codecogs.com/svg.latex?;height_B=\sqrt{(TopLeft_x-BottomLeft_x)^2+(TopLeft_y-BottomLeft_y)^2}"/>
 </div><br>
 As the final image is intended to be a rectangle that maintains the proportions of the matrix, the maximum value must be taken for each width and each height.<br><br>
 
@@ -214,7 +214,7 @@ Where F is a random number between 0 and 2.
 Later, in the crossover, what is sought is to combine the original vector x<sub>i</sub> with the previously created v<sub>i</sub> for the emergence of another vector called u<sub>i</sub>. This combination is made interleaved from the index 0 to k, and the decision to take for u<sub>ik</sub> the x<sub>ij</sub> or the v<sub>ij</sub>, is made by means of a probability 'Cr', which in this case is 0.5.<br><br>
 
 <div align="center">
-    <img width="30%" src="https://latex.codecogs.com/svg.latex?\Large&space;u_{k}^{i}=\begin{cases}v_{k}^{i},&if\;rand(0,1)\leq Cr\;\\x_{k}^{i},&otherwise\end{cases}"/>
+    <img width="30%" src="https://latex.codecogs.com/svg.latex?;u_{k}^{i}=\begin{cases}v_{k}^{i},&if\;rand(0,1)\leq Cr\;\\x_{k}^{i},&otherwise\end{cases}"/>
 </div><br>
 
 And finally, in the selection of survivors, the best individual between xi and ui is selected for a tournament, and the one who survives will be part of the next generation.<br><br>
@@ -228,7 +228,7 @@ And finally, in the selection of survivors, the best individual between xi and u
         <b>A. Objective function</b><br>
         What is sought to do to solve this problem is to minimize the sum of the difference between the image of the control ColorChecker matrix (I<sub>1</sub>), and the product between the image of the ColorChecker matrix that is being calibrated (I<sub>2</sub>) with the proposed matrix 'm', this will be taken as the objective function that will serve in the differential evolution algorithm, only the difference will be absolute.<br><br>
         <div align="center">
-            <img width="30%" src="https://latex.codecogs.com/svg.latex?\Large&space;f(I_1,I_2,m)=\sum\left|I_1-(I_2\cdot m)\right|"/>
+            <img width="30%" src="https://latex.codecogs.com/svg.latex?;f(I_1,I_2,m)=\sum\left|I_1-(I_2\cdot m)\right|"/>
         </div><br>
     </li>
     <li>
@@ -261,13 +261,13 @@ The proposed algorithm was run 100 times, where the following information could 
 Of those 100 given runs, the best result was run number 48, which obtained a fitness of 1284.0, corresponding to the matrix:<br><br>
 
 <div width="50%" align="center">
-    <img src="https://latex.codecogs.com/svg.latex?\Large&space;\begin{bmatrix}1.4785&-0.1431&-0.10365\\0.0565&1.4331&-1.1011\\-0.2031&-0.1527&2.0\end{bmatrix}"/>
+    <img src="https://latex.codecogs.com/svg.latex?;\begin{bmatrix}1.4785&-0.1431&-0.10365\\0.0565&1.4331&-1.1011\\-0.2031&-0.1527&2.0\end{bmatrix}"/>
 </div><br>
 
 While the worst result of those 100 runs was attempt number 45, which obtained a fitness of 1295.0 whose matrix was:<br><br>
 
 <div width="50%" align="center">
-    <img src="https://latex.codecogs.com/svg.latex?\Large&space;\begin{bmatrix}1.5273&-0.1431&-0.10365\\0.0565&1.4331&-1.1011\\-0.2031&-0.1527&2.0\end{bmatrix}"/>
+    <img src="https://latex.codecogs.com/svg.latex?;\begin{bmatrix}1.5273&-0.1431&-0.10365\\0.0565&1.4331&-1.1011\\-0.2031&-0.1527&2.0\end{bmatrix}"/>
 </div><br>
 
 As can be seen, the results of the extremes are almost identical, both in the fitness and in the matrix, it only varies in the value [0,0] of the matrix; this small difference caused an 11-point variation in fitness, which is very small.<br><br>
