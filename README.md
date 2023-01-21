@@ -214,7 +214,7 @@ Where F is a random number between 0 and 2.
 Later, in the crossover, what is sought is to combine the original vector x<sub>i</sub> with the previously created v<sub>i</sub> for the emergence of another vector called u<sub>i</sub>. This combination is made interleaved from the index 0 to k, and the decision to take for u<sub>ik</sub> the x<sub>ij</sub> or the v<sub>ij</sub>, is made by means of a probability 'Cr', which in this case is 0.5.<br><br>
 
 <div align="center">
-    <img width="30%" src="https://latex.codecogs.com/svg.latex?u_{k}^{i}=\begin{cases}v_{k}^{i},&if\;rand(0,1)\leq Cr\;\\x_{k}^{i},&otherwise\end{cases}"/>
+    <img width="30%" src="https://github.com/ASASauqui/Color-calibration/blob/main/readme_images/math/1.svg?raw=true"/>
 </div><br>
 
 And finally, in the selection of survivors, the best individual between xi and ui is selected for a tournament, and the one who survives will be part of the next generation.<br><br>
@@ -228,7 +228,7 @@ And finally, in the selection of survivors, the best individual between xi and u
         <b>A. Objective function</b><br>
         What is sought to do to solve this problem is to minimize the sum of the difference between the image of the control ColorChecker matrix (I<sub>1</sub>), and the product between the image of the ColorChecker matrix that is being calibrated (I<sub>2</sub>) with the proposed matrix 'm', this will be taken as the objective function that will serve in the differential evolution algorithm, only the difference will be absolute.<br><br>
         <div align="center">
-            <img width="30%" src="https://latex.codecogs.com/svg.latex?f(I_1,I_2,m)=\sum\left|I_1-(I_2\cdot m)\right|"/>
+            <img width="30%" src="https://github.com/ASASauqui/Color-calibration/blob/main/readme_images/math/2.svg?raw=true"/>
         </div><br>
     </li>
     <li>
