@@ -59,7 +59,7 @@ You will find a total of 2 codes made in Python, of which 1 has the extension .i
         <div align="center">
             <img width="60%" src="https://github.com/ASASauqui/Color-calibration/blob/main/readme_images/codes/1.png?raw=true" />
             <p>Images comparison.</p>
-        </div><br>
+        </div>
     </li>
 </ol>
 <br>
@@ -76,7 +76,7 @@ In total there are 2 folders, the one with the name "datasets" and the one with 
         <b>manuscript:</b> In the "manuscript" folder there is an IEEE format manuscript that explains in detail the methodology of this project. If you want to know more, read this article.
     </li>
 </ol>
-<br><br>
+<br>
 
 <h2><b>Methodology</b></h2>
 
@@ -214,7 +214,7 @@ Where F is a random number between 0 and 2.
 Later, in the crossover, what is sought is to combine the original vector x<sub>i</sub> with the previously created v<sub>i</sub> for the emergence of another vector called u<sub>i</sub>. This combination is made interleaved from the index 0 to k, and the decision to take for u<sub>ik</sub> the x<sub>ij</sub> or the v<sub>ij</sub>, is made by means of a probability 'Cr', which in this case is 0.5.<br><br>
 
 <div align="center">
-    <img width="50%" src="https://latex.codecogs.com/svg.latex?\Large&space;u_{k}^{i}=\begin{cases}v_{k}^{i},&if\;rand(0,1)\leq Cr\;\\x_{k}^{i},&otherwise\end{cases}"/>
+    <img width="30%" src="https://latex.codecogs.com/svg.latex?\Large&space;u_{k}^{i}=\begin{cases}v_{k}^{i},&if\;rand(0,1)\leq Cr\;\\x_{k}^{i},&otherwise\end{cases}"/>
 </div><br>
 
 And finally, in the selection of survivors, the best individual between xi and ui is selected for a tournament, and the one who survives will be part of the next generation.<br><br>
@@ -227,8 +227,8 @@ And finally, in the selection of survivors, the best individual between xi and u
     <li>
         <b>A. Objective function</b><br>
         What is sought to do to solve this problem is to minimize the sum of the difference between the image of the control ColorChecker matrix (I<sub>1</sub>), and the product between the image of the ColorChecker matrix that is being calibrated (I<sub>2</sub>) with the proposed matrix 'm', this will be taken as the objective function that will serve in the differential evolution algorithm, only the difference will be absolute.<br><br>
-        <div width="50%" align="center">
-            <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(I_1,I_2,m)=\sum\left|I_1-(I_2\cdot m)\right|"/>
+        <div align="center">
+            <img width="30%" src="https://latex.codecogs.com/svg.latex?\Large&space;f(I_1,I_2,m)=\sum\left|I_1-(I_2\cdot m)\right|"/>
         </div><br>
     </li>
     <li>
@@ -251,12 +251,12 @@ And finally, in the selection of survivors, the best individual between xi and u
 
 <h2><b>4. Results</b></h2>
 
-The proposed algorithm was run 100 times, where the following information could be collected.<br><br>
+The proposed algorithm was run 100 times, where the following information could be collected.<br>
 
 <div align="center">
-    <img width="50%" src="https://github.com/ASASauqui/Color-calibration/blob/main/readme_images/methodology/4.png?raw=true" />
-    <p>Control matrix and matrix to be calibrated with the perspective transformation.
-</p><br>
+    <img width="50%" src="https://github.com/ASASauqui/Color-calibration/blob/main/readme_images/results/1.png?raw=true" />
+    <p>Result of 100 runs of the algorithm.</p>
+</div><br>
 
 Of those 100 given runs, the best result was run number 48, which obtained a fitness of 1284.0, corresponding to the matrix:<br><br>
 
@@ -274,16 +274,20 @@ As can be seen, the results of the extremes are almost identical, both in the fi
 
 The mean and median of these 100 results are equivalent, the mean was 1288.57 and the median was 1288.0, only 0.57 difference, so this was the most obtained result. While the standard deviation indicates that there was not much variation between results, giving a deviation of 2.467.<br><br>
 
-The calibrated images based on these calibration matrices compared with the original image are the following:<br><br>
+The calibrated images based on these calibration matrices compared with the original image are the following:<br>
+
+<div align="center">
+    <img width="70%" src="https://github.com/ASASauqui/Color-calibration/blob/main/readme_images/results/2.png?raw=true" />
+    <p>Comparison of calibrated images.</p>
+</div><br>
 
 It can be seen that both the worst and the best solutions obtained very good results. The control matrix, being a digital image, seeks to make the colors more vivid by being 100% faithful to the original. Although a calibration that is identical to the control matrix was not achieved, very positive changes were made.<br><br>
 
-The result matrices, in comparison with the control matrix and with the matrix that was sought to be calibrated at the beginning, are seen as follows:<br><br>
-
-As previously mentioned, both the worst and the best solutions have very good results, so there is not much change.<br><br>
-
+The result matrices, in comparison with the control matrix and with the matrix that was sought to be calibrated at the beginning, are seen as follows:<br>
 
 <div align="center">
-    <img width="40%" src="https://github.com/ASASauqui/Car-license-plate-detector-and-reader/blob/main/Readme%20Images/methodology/methodology_9.png?raw=true" />
-    <p>Some predictions.</p>
-</div>
+    <img width="50%" src="https://github.com/ASASauqui/Color-calibration/blob/main/readme_images/results/3.png?raw=true" />
+    <p>Comparison of calibrated matrix.</p>
+</div><br>
+
+As previously mentioned, both the worst and the best solutions have very good results, so there is not much change.<br><br>
