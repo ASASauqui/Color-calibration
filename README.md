@@ -62,8 +62,8 @@ You will find a total of 2 codes made in Python, of which 1 has the extension .i
     <li>
         <b>color_calibration.ipynb</b> In this code is all the image processing necessary to prepare the ColorChecker and obtain the necessary data to start the differential evolution algorithm, to obtain the multiplier matrix that will calibrate the image properly.<br><br>
         <div align="center">
-            <img width="50%" src="https://github.com/ASASauqui/Car-license-plate-detector-and-reader/blob/main/Readme%20Images/codes_images/2.png?raw=true" />
-            <p>Model files.</p>
+            <img width="80%" src="https://github.com/ASASauqui/Color-calibration/blob/main/readme_images/codes/1.png?raw=true" />
+            <p>Images comparation.</p>
         </div><br>
     </li>
 </ol>
@@ -93,7 +93,7 @@ Below is a full explanation of the methodology used.
         <b>A. Load images</b><br>
         Firstly, you need to load the two images to be used, the image that contains the control matrix and another image which will contain the same matrix, but in a different context (different lighting and position). Once these images are loaded, you can proceed to extract the color matrix.<br><br>
         <div align="center">
-            <img width="60%" src="https://github.com/ASASauqui/Car-license-plate-detector-and-reader/blob/main/Readme%20Images/methodology/methodology_1.png?raw=true" />
+            <img width="60%" src="https://github.com/ASASauqui/Color-calibration/blob/main/readme_images/methodology/1.png?raw=true" />
             <p>Image of the letter 'A' after going through image processing.</p>
         </div><br>
     </li>
@@ -102,7 +102,7 @@ Below is a full explanation of the methodology used.
         This is a method that receives the image where the color matrix is located, which you want to cut in order to extract the information. This method must be applied for both images.<br><br>
         Firstly, the area of the image (height x width) is obtained, this for later steps. In order to do a good image processing, the image must be transformed to a gray scale, and after that apply an inverse binary thresholding, it has to be inverse so that the matrix is taken with values of 1, otherwise it will take parts that are not wanted.<br><br>
         <div align="center">
-            <img width="60%" src="https://github.com/ASASauqui/Car-license-plate-detector-and-reader/blob/main/Readme%20Images/methodology/methodology_1.png?raw=true" />
+            <img width="60%" src="https://github.com/ASASauqui/Color-calibration/blob/main/readme_images/methodology/2.png?raw=true" />
             <p>Image of the letter 'A' after going through image processing.</p>
         </div><br>
         Once this thresholding has been applied, an algorithm must be applied to search for the contours present in the image, but, since it is only desired to find the matrix in its entirety, this search for contours has to be for those external contours that do not belong to another contour, that is, look for contours that do not depend on others. With this, the matrix can be isolated for later location.<br><br>
@@ -127,7 +127,7 @@ Below is a full explanation of the methodology used.
         </ol><br>
         Having found the best candidate (which should be the color matrix), we can proceed to the image transformation part of the matrix.<br><br>
         <div align="center">
-            <img width="60%" src="https://github.com/ASASauqui/Car-license-plate-detector-and-reader/blob/main/Readme%20Images/methodology/methodology_1.png?raw=true" />
+            <img width="60%" src="https://github.com/ASASauqui/Color-calibration/blob/main/readme_images/methodology/3.png?raw=true" />
             <p>Image of the letter 'A' after going through image processing.</p>
         </div><br>
     </li>
@@ -154,7 +154,7 @@ Once the maximum height and width values are obtained, an array can be made with
 
 Once the maximum height and width values are obtained, a perspective transformation can be performed with the original points and the destination points. Having this, a perspective transformation algorithm is performed in order to provide you with more information about the required information of the given image.<br><br>
 <div align="center">
-    <img width="60%" src="https://github.com/ASASauqui/Car-license-plate-detector-and-reader/blob/main/Readme%20Images/methodology/methodology_1.png?raw=true" />
+    <img width="60%" src="https://github.com/ASASauqui/Color-calibration/blob/main/readme_images/methodology/4.png?raw=true" />
     <p>Image of the letter 'A' after going through image processing.</p>
 </div><br>
 To finish, simply resize the image to 800x500 pixels, this to have a constant image size for data extraction, otherwise it may vary in size and affect the last process.<br><br>
@@ -170,7 +170,7 @@ The region of the square from xi to xi + width, and from yi to yi + height is ex
     𝐶𝑜𝑙𝑜𝑟 𝑟𝑒𝑔𝑖𝑜𝑛 = 𝑖𝑚𝑔[𝑦𝑖 : 𝑦𝑖 + ℎ𝑒𝑖𝑔ℎ𝑡, 𝑥𝑖 : 𝑥𝑖 + 𝑤𝑖𝑑𝑡ℎ]
 </p>
 <div align="center">
-    <img width="60%" src="https://github.com/ASASauqui/Car-license-plate-detector-and-reader/blob/main/Readme%20Images/methodology/methodology_1.png?raw=true" />
+    <img width="60%" src="https://github.com/ASASauqui/Color-calibration/blob/main/readme_images/methodology/5.png?raw=true" />
     <p>Image of the letter 'A' after going through image processing.</p>
 </div><br>
 
